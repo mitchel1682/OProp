@@ -1,0 +1,12 @@
+CXXFLAGS = $(ARMA_INCLUDE_FLAG) $(DEBUG) $(FINAL) $(OPT) $(EXTRA_OPT) 
+
+all: example1
+
+example1: example1.cpp
+	$(CXX) $(CXXFLAGS)  -o $@  $<  $(LIB_FLAGS)
+
+
+.PHONY: clean
+
+clean:
+	rm -f example1
